@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Generator</title>
+    <link rel="stylesheet" href="path/to/your/izitoast.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="iziToast.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form {
+            width: 300px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form label:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .form label:first-child::before {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.04em;
+            text-align: left;
+        }
+
+        .delay-ms {
+            width: 360px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #808080;
+            color: #2E2F42;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.04em;
+            text-align: left;
+            padding-left: 16px;
+            box-sizing: content-box;
+        }
+
+        .delay-ms:hover {
+            border: 1px solid #000000;
+        }
+
+        .delay-ms:focus {
+            outline: none;
+            border: 1px solid #4E75FF;
+        }
+
+        legend {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.04em;
+            text-align: left;
+        }
+
+        .state-field {
+            width: 354px;
+            height: 64px;
+            border: 1px solid #808080;
+            border-radius: 4px;
+            margin: 0;
+            box-sizing: content-box;
+            display: flex;
+            gap: 48px; 
+            align-items: center; 
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+
+        .state-field:hover {
+            border: 1px solid black;
+        }
+
+        .state-field input:checked {
+            border: 1px solid #000000;
+        }
+
+        button {
+            width: 370px;
+            height: 40px;
+            top: 718px;
+            left: 28px;
+            padding: 8px, 16px, 8px, 16px;
+            border-radius: 8px;
+            gap: 10px;
+            border: none;
+            box-sizing: content-box;
+            background-color: #4E75FF;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0.04em;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6C8CFF;
+        }
+    </style>
+  <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js"></script>
+  <script type="module" crossorigin src="/goit-js-hw-10/assets/vendor-651d7991.js"></script>
+  <script type="module" crossorigin src="/goit-js-hw-10/assets/2-snackbar-831793c7.js"></script>
+  <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
+</head>
+
+<body>
+
+    <form class="form">
+        <label>
+            Delay (ms)
+            <input class="delay-ms" type="number" name="delay" required />
+        </label>
+
+        <fieldset class="state-field">
+            <legend>State</legend>
+            <label>
+                <input type="radio" name="state" value="fulfilled" required />
+                Fulfilled
+            </label>
+            <label>
+                <input type="radio" name="state" value="rejected" required />
+                Rejected
+            </label>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+    </form>
+
+    <script src="path/to/your/izitoast.min.js"></script>
+    
+
+</body>
+
+</html>
