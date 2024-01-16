@@ -28,7 +28,7 @@ document.querySelector('.form').addEventListener('submit', function (event) {
     (value) => {
       iziToast.success({
         title: '',
-        message: `Fulfilled promise in ${value}ms ✅`,
+        message: `Fulfilled promise in ${value}ms! ✅`,
           position: 'topRight',
         icon: '',
       });
@@ -36,7 +36,7 @@ document.querySelector('.form').addEventListener('submit', function (event) {
     (reason) => {
       iziToast.error({
         title: '',
-        message: `Rejected promise in ${reason}ms ❌`,
+        message: `Rejected promise in ${reason}ms! ❌`,
           position: 'topRight',
         icon: '',
       });
