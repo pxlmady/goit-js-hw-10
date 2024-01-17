@@ -51,10 +51,10 @@
         border: 1px solid #4E75FF;
     }
 
-    button[disabled] input {
-        border: 1px solid #ff0000;
-        color: #ff0000;
-    }
+    .start-button:disabled + #datetime-picker {
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
 
     button {
         color: white;
@@ -78,8 +78,9 @@
         background-color: #6C8CFF;
     }
 
-    button:disabled {
+    .start-button:disabled {
         color: #989898;
+        border: 1px solid #CFCFCF;
         background-color: #CFCFCF;
     }
   </style>
@@ -92,7 +93,7 @@
 <body>
 
   <input type="text" id="datetime-picker"/>
-  <button type="button" data-start>Start</button>
+  <button class="start-button" type="button" data-start>Start</button>
 
   <div class="timer">
     <div class="field">
