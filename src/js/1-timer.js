@@ -5,7 +5,6 @@ import "flatpickr/dist/flatpickr.min.css";
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-
 let userSelectedDate;
 let startButton = document.querySelector('[data-start]');
 startButton.disabled = true;
@@ -45,6 +44,7 @@ const options = {
 startButton.addEventListener('click', () => {
   if (userSelectedDate) {
     startTimer();
+    startButton.disabled = true;
   }
 });
 
@@ -61,6 +61,7 @@ function updateTimerDisplay() {
 
   if (timeDifference <= 0) {
     stopTimer();
+    startButton.disabled = false;
   }
 }
 
